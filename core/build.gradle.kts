@@ -33,9 +33,7 @@ dependencies {
     implementation(project(":v1_18", "reobf"))
     implementation(project(":v1_17", "reobf"))
 
-    implementation("com.github.retrooper.packetevents:spigot:2.2.1") {
-        exclude("net.kyori") // already bundled in paper
-    }
+    implementation("com.github.retrooper.packetevents:spigot:2.2.1")
     implementation("com.github.Anon8281:UniversalScheduler:0.1.6")
     implementation("dev.jorel:commandapi-bukkit-shade:9.3.0")
 
@@ -74,6 +72,7 @@ tasks {
         archiveVersion.set("${rootProject.version}")
 
         minimize()
+        relocate("net.kyori", "xyz.reknown.libs.net.kyori")
         relocate("com.github.Anon8281.universalScheduler", "xyz.reknown.libs.scheduler")
         relocate("com.github.retrooper.packetevents", "xyz.reknown.fastercrystals.packetevents.api")
         relocate("io.github.retrooper.packetevents", "xyz.reknown.fastercrystals.packetevents.impl")
