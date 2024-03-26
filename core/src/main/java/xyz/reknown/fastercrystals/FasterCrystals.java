@@ -29,7 +29,7 @@ import xyz.reknown.fastercrystals.listeners.packet.InteractEntityListener;
 import xyz.reknown.fastercrystals.listeners.packet.LastPacketListener;
 import xyz.reknown.fastercrystals.pickable.*;
 import com.github.Anon8281.universalScheduler.UniversalScheduler;
-import com.github.Anon8281.universalScheduler.TaskScheduler;
+import com.github.Anon8281.universalScheduler.scheduling.schedulers.TaskScheduler;
 import xyz.reknown.fastercrystals.user.Users;
 
 import java.util.ArrayList;
