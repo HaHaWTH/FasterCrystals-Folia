@@ -33,7 +33,7 @@ public class AnimationListener extends SimplePacketListenerAbstract {
         AnimPackets lastPacket = user.getLastPacket();
         Location eyeLoc = player.getEyeLocation();
         Vector direction = eyeLoc.getDirection();
-        Bukkit.getScheduler().runTask(plugin, () -> {
+        FasterCrystals.getScheduler().runTask(() -> {
             if (lastPacket == AnimPackets.IGNORE) return; // animation is for hotbar drop item/placement/use item
             if (user.isIgnoreAnim()) return; // animation is for inventory drop item
 
