@@ -32,7 +32,9 @@ dependencies {
     implementation(project(":v1_18_2", "reobf"))
     implementation(project(":v1_18", "reobf"))
     implementation(project(":v1_17", "reobf"))
-    implementation("com.github.retrooper.packetevents:spigot:2.2.1")
+    implementation("com.github.retrooper.packetevents:spigot:2.2.0") {
+        exclude("net.kyori") // already bundled in paper
+    }
     implementation("com.github.Anon8281:UniversalScheduler:0.1.6")
     implementation("net.kyori:adventure-text-minimessage:4.16.0")
     implementation("dev.jorel:commandapi-bukkit-shade:9.3.0")
