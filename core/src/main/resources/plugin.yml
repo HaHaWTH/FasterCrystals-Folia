@@ -2,6 +2,7 @@ main: xyz.reknown.fastercrystals.FasterCrystals
 name: $name
 version: $version
 author: Jyguy
+folia-supported: true
 api-version: "$apiVersion"
 softdepend:
   - ProtocolLib
