@@ -13,6 +13,7 @@ java {
 repositories {
     maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
     maven { url = uri("https://repo.codemc.io/repository/maven-releases/") }
+    maven { url = uri("https://jitpack.io/") }
 }
 
 dependencies {
@@ -32,9 +33,10 @@ dependencies {
     implementation(project(":v1_18", "reobf"))
     implementation(project(":v1_17", "reobf"))
 
-    implementation("com.github.retrooper.packetevents:spigot:2.2.0") {
+    implementation("com.github.retrooper.packetevents:spigot:2.2.1") {
         exclude("net.kyori") // already bundled in paper
     }
+    implementation("com.github.Anon8281:UniversalScheduler:0.1.6")
     implementation("dev.jorel:commandapi-bukkit-shade:9.3.0")
 
     compileOnly("org.projectlombok:lombok:1.18.30")
@@ -72,6 +74,7 @@ tasks {
         archiveVersion.set("${rootProject.version}")
 
         minimize()
+        relocate("com.github.Anon8281.universalScheduler", "xyz.reknown.libs.scheduler")
         relocate("com.github.retrooper.packetevents", "xyz.reknown.fastercrystals.packetevents.api")
         relocate("io.github.retrooper.packetevents", "xyz.reknown.fastercrystals.packetevents.impl")
         relocate("dev.jorel.commandapi", "xyz.reknown.fastercrystals.commandapi")
