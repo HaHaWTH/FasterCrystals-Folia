@@ -28,6 +28,8 @@ import xyz.reknown.fastercrystals.listeners.packet.AnimationListener;
 import xyz.reknown.fastercrystals.listeners.packet.InteractEntityListener;
 import xyz.reknown.fastercrystals.listeners.packet.LastPacketListener;
 import xyz.reknown.fastercrystals.pickable.*;
+import com.github.Anon8281.universalScheduler.UniversalScheduler;
+import com.github.Anon8281.universalScheduler.TaskScheduler;
 import xyz.reknown.fastercrystals.user.Users;
 
 import java.util.ArrayList;
@@ -41,6 +43,7 @@ public class FasterCrystals extends JavaPlugin {
     @Getter private ICrystalDamager damager;
     @Getter private IPickableChecker pickableChecker;
     @Getter private Users users;
+    @Getter private static TaskScheduler scheduler;
     private Map<Integer, EnderCrystal> crystalIds;
 
     @Override
@@ -56,6 +59,7 @@ public class FasterCrystals extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        scheduler = UniversalScheduler.getScheduler(this);
         config();
 
         switch (Bukkit.getMinecraftVersion()) {
