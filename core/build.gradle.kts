@@ -29,6 +29,7 @@ dependencies {
 
     implementation("com.github.retrooper.packetevents:spigot:2.2.1")
     implementation("com.github.Anon8281:UniversalScheduler:0.1.6")
+    implementation("net.kyori:adventure-text-minimessage:4.16.0")
     implementation("dev.jorel:commandapi-bukkit-shade:9.3.0")
 
     compileOnly("org.projectlombok:lombok:1.18.30")
@@ -66,6 +67,7 @@ tasks {
         archiveVersion.set("${rootProject.version}")
 
         minimize()
+        relocate("net.kyori", "xyz.reknown.libs.net.kyori")
         relocate("com.github.Anon8281.universalScheduler", "xyz.reknown.libs.scheduler")
         relocate("com.github.retrooper.packetevents", "xyz.reknown.fastercrystals.packetevents.api")
         relocate("io.github.retrooper.packetevents", "xyz.reknown.fastercrystals.packetevents.impl")
