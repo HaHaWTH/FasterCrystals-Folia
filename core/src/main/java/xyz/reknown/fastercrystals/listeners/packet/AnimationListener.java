@@ -33,7 +33,7 @@ public class AnimationListener extends SimplePacketListenerAbstract {
         AnimPackets lastPacket = user.getLastPacket();
         Location eyeLoc = player.getEyeLocation();
         Vector direction = eyeLoc.getDirection();
-        FasterCrystals.getScheduler().runTask(() -> {
+        FasterCrystals.getScheduler().runTask(player, () -> {
             if (lastPacket == AnimPackets.IGNORE) return; // animation is for hotbar drop item/placement/use item
             if (user.isIgnoreAnim()) return; // animation is for inventory drop item
 
