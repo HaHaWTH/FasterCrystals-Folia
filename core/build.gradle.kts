@@ -26,12 +26,6 @@ dependencies {
     implementation(project(":v1_20_3", "reobf"))
     implementation(project(":v1_20_2", "reobf"))
     implementation(project(":v1_20", "reobf"))
-    implementation(project(":v1_19_4", "reobf"))
-    implementation(project(":v1_19_3", "reobf"))
-    implementation(project(":v1_19", "reobf"))
-    implementation(project(":v1_18_2", "reobf"))
-    implementation(project(":v1_18", "reobf"))
-    implementation(project(":v1_17", "reobf"))
 
     implementation("com.github.retrooper.packetevents:spigot:2.2.1")
     implementation("com.github.Anon8281:UniversalScheduler:0.1.6")
