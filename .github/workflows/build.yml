@@ -25,7 +25,7 @@ jobs:
         run: git config --global user.email "no-reply@github.com" && git config --global user.name "Github Actions"
 
       - name: Build
-        run: ./gradlew core:shadowJar
+        run: ./gradlew :core:shadowJar
       - name: Upload
         uses: actions/upload-artifact@main
         with:
