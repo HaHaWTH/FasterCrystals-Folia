@@ -72,7 +72,6 @@ tasks {
         archiveVersion.set("${rootProject.version}")
 
         minimize()
-        relocate("net.kyori", "xyz.reknown.libs.net.kyori")
         relocate("com.github.Anon8281.universalScheduler", "xyz.reknown.libs.scheduler")
         relocate("com.github.retrooper.packetevents", "xyz.reknown.fastercrystals.packetevents.api")
         relocate("io.github.retrooper.packetevents", "xyz.reknown.fastercrystals.packetevents.impl")
