@@ -45,7 +45,7 @@ public class InteractEntityListener extends SimplePacketListenerAbstract {
 
         Location eyeLoc = player.getEyeLocation();
         Vector direction = eyeLoc.getDirection();
-        FasterCrystals.getScheduler().runTask(() -> {
+        FasterCrystals.getScheduler().runTask(player, () -> {
             Location blockLoc = entity.getLocation().clone().subtract(0.5, 1.0, 0.5);
 
             RayTraceResult result = player.getWorld().rayTraceBlocks(eyeLoc, direction,
