@@ -43,13 +43,15 @@ public class AnimationListener extends SimplePacketListenerAbstract {
                     3.0,
                     0.0,
                     entity -> {
-                        if (!plugin.getPickableChecker().isPickable(entity)) return false;
-                        if (entity.getType() != EntityType.PLAYER) return true;
+                        FasterCrystals.runTask(entity,()-> {
+                            if (!plugin.getPickableChecker().isPickable(entity)) return false;
+                            if (entity.getType() != EntityType.PLAYER) return true;
 
-                        Player p = (Player) entity;
-                        if (p.getGameMode() == GameMode.SPECTATOR) return false;
+                            Player p = (Player) entity;
+                            if (p.getGameMode() == GameMode.SPECTATOR) return false;
 
-                        return !player.getUniqueId().equals(p.getUniqueId()) && player.canSee(p);
+                            return !player.getUniqueId().equals(p.getUniqueId()) && player.canSee(p);
+                        });
                     }
             );
             if (result == null) return;
